@@ -59,13 +59,13 @@ public class gui extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 204, 204));
-		panel.setBounds(10, 10, 736, 119);
+		panel.setBounds(10, 10, 736, 106);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("CAIXABANK");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel.setBounds(291, 65, 125, 54);
+		lblNewLabel.setBounds(290, 52, 125, 54);
 		panel.add(lblNewLabel);
 		
 		JButton btnNewButton_1 = new JButton("2");
@@ -116,20 +116,44 @@ public class gui extends JFrame {
 		JPanel panel_2 = new JPanel();
 		panel_2.setForeground(new Color(0, 0, 0));
 		panel_2.setBackground(new Color(102, 102, 102));
-		panel_2.setBounds(10, 127, 736, 210);
+		panel_2.setBounds(10, 114, 736, 223);
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(51, 51, 51));
-		panel_1.setBounds(10, 10, 555, 191);
+		panel_1.setBounds(10, 10, 555, 203);
 		panel_2.add(panel_1);
 		panel_1.setLayout(null);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(51, 204, 153));
-		panel_3.setBounds(10, 10, 535, 171);
+		panel_3.setBounds(10, 10, 535, 183);
 		panel_1.add(panel_3);
+		
+		JButton btnNewButton_1_1_3_1 = new JButton("<");
+		btnNewButton_1_1_3_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_1_1_3_1.setBackground(new Color(0, 0, 0));
+		btnNewButton_1_1_3_1.setBounds(570, 90, 43, 25);
+		panel_2.add(btnNewButton_1_1_3_1);
+		
+		JButton btnNewButton_1_1_3_1_1 = new JButton("<");
+		btnNewButton_1_1_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_1_1_3_1_1.setBackground(new Color(0, 0, 0));
+		btnNewButton_1_1_3_1_1.setBounds(570, 125, 43, 25);
+		panel_2.add(btnNewButton_1_1_3_1_1);
+		
+		JButton btnNewButton_1_1_3_1_2 = new JButton("<");
+		btnNewButton_1_1_3_1_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_1_1_3_1_2.setBackground(new Color(0, 0, 0));
+		btnNewButton_1_1_3_1_2.setBounds(570, 160, 43, 25);
+		panel_2.add(btnNewButton_1_1_3_1_2);
+		
+		JButton btnNewButton_1_1_3_1_3 = new JButton("<");
+		btnNewButton_1_1_3_1_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_1_1_3_1_3.setBackground(new Color(0, 0, 0));
+		btnNewButton_1_1_3_1_3.setBounds(570, 55, 43, 25);
+		panel_2.add(btnNewButton_1_1_3_1_3);
 		
 		JPanel panel_2_1 = new JPanel();
 		panel_2_1.setForeground(Color.BLACK);
@@ -150,18 +174,21 @@ public class gui extends JFrame {
 		panel_5.setLayout(null);
 		
 		JButton btnNewButton_1_1_2_1 = new JButton("Aceptar");
+		btnNewButton_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_1_1_2_1.setBounds(361, 129, 85, 44);
 		panel_5.add(btnNewButton_1_1_2_1);
 		btnNewButton_1_1_2_1.setBackground(new Color(102, 255, 0));
 		
-		JButton btnNewButton_1_1_1_1 = new JButton("Borrar");
-		btnNewButton_1_1_1_1.setBounds(361, 75, 85, 44);
-		panel_5.add(btnNewButton_1_1_1_1);
-		btnNewButton_1_1_1_1.setBackground(new Color(255, 255, 51));
-		
 		JButton btnNewButton_1_1_3 = new JButton("Cancelar");
+		btnNewButton_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_1_1_3.setBounds(361, 21, 85, 44);
 		panel_5.add(btnNewButton_1_1_3);
 		btnNewButton_1_1_3.setBackground(new Color(255, 0, 0));
+		
+		JButton btnNewButton_1_1_1_1 = new JButton("Borrar");
+		btnNewButton_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_1_1_1_1.setBounds(361, 75, 85, 44);
+		panel_5.add(btnNewButton_1_1_1_1);
+		btnNewButton_1_1_1_1.setBackground(new Color(255, 255, 51));
 	}
 }
