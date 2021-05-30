@@ -16,8 +16,8 @@ public class Menu extends AppBanco {
 	/**
 	 * Constructor de menu
 	 * 
-	 * @param nU
-	 * @param idU
+	 * @param nU String
+	 * @param idU String
 	 */
 	public Menu(String nU, String idU) {
 		super(nU, idU);

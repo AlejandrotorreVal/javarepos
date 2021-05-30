@@ -56,7 +56,7 @@ public class AppBanco {
 	}
 
 	/** Deposita la cantidad en la cuenta
-	 * @param cantidad
+	 * @param cantidad int
 	 */
 	public static void deposito(int cantidad) {
 
@@ -71,7 +71,7 @@ public class AppBanco {
 	/**
 	 * Retira la cantidad en la cuenta
 	 * 
-	 * @param cantidad
+	 * @param cantidad int
 	 */
 	public static void retirar(int cantidad) {
 
@@ -95,7 +95,7 @@ public class AppBanco {
 	/**
 	 * Compra acciones
 	 * 
-	 * @param cantidad
+	 * @param cantidad double
 	 */
 	public static void comprarAcciones(double cantidad) {
 		 double ac0 = 700;
@@ -152,7 +152,7 @@ public class AppBanco {
 	/**
 	 * Modifica el valor del balance
 	 * 
-	 * @param d
+	 * @param d double
 	 */
 	public static void setBalance(double d) {
 		AppBanco.balance = d;
@@ -170,14 +170,14 @@ public class AppBanco {
 	/**
 	 * Modifica el nombre de usuario
 	 * 
-	 * @param nombreUsuario
+	 * @param nombreUsuario String
 	 */
 	public static void setNombreUsuario(String nombreUsuario) {
 		AppBanco.nombreUsuario = nombreUsuario;
 	}
 	
 	/** Devuelve el valor de acciones
-	 * @return acciones
+	 * @return acciones 
 	 */
 	public static double getAcciones() {
 		return acciones;
@@ -191,14 +191,14 @@ public class AppBanco {
 	}
 	
 	/** Devuelve el valor de opcion1
-	 * @return opcion1
+	 * @return opcion1 byte
 	 */
 	public static byte getOpcion1() {
 		return opcion1;
 	}
 
 	/** Modifica el valor de opcion1
-	 * @param opcion1
+	 * @param opcion1 byte
 	 */
 	public static void setOpcion1(byte opcion1) {
 		AppBanco.opcion1 = opcion1;

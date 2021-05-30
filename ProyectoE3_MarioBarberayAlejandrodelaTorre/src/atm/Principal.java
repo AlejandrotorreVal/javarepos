@@ -9,7 +9,7 @@ public class Principal {
 	
 	
 	/**
-	 * @param args
+	 * @param args String
 	 */
 	public static void main(String[] args) {
 		
