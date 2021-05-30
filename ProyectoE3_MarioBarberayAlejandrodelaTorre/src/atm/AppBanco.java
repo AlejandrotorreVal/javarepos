@@ -1,25 +1,27 @@
 package atm;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * 
  * @author Alejandro y Mario
- * @version 1.0 30/05/2021
+ * @version 3.0 30/05/2021
  *
  */
 
 public class AppBanco {
-	private static int balance;
+	protected static double balance;
 	public static int transaccionPrevia;
 	public static String nombreUsuario;
 	public static String idUsuario;
 	public static byte opcion1 = 0;
-	public static int acciones;
+	public static double acciones;
 	public static ArrayList<String> transa = new ArrayList<String>();
 	public static int contraseña = 1234;
 	public static Scanner sc = new Scanner(System.in);
+	public static DecimalFormat df = new DecimalFormat("0.00000");
 
 	/**
 	 * Constuctor de appbanco
@@ -39,7 +41,7 @@ public class AppBanco {
 	 * @param cantidad
 	 */
 
-	/**public static void login() {
+	public static void login() {
 		int scan;
 		do {
 			scan = sc.nextInt();
@@ -51,7 +53,7 @@ public class AppBanco {
 			}
 
 		} while (contraseña != scan);
-	}**/
+	}
 
 	public static void deposito(int cantidad) {
 
@@ -59,7 +61,7 @@ public class AppBanco {
 			setBalance(getBalance() + cantidad);
 			transaccionPrevia = cantidad;
 			transa.add("Deposito: $" + transaccionPrevia);
-			System.out.println(transa);
+		
 		}
 	}
 
@@ -74,7 +76,7 @@ public class AppBanco {
 			setBalance(getBalance() - cantidad);
 			transaccionPrevia = -cantidad;
 			transa.add("Retiro: $" + transaccionPrevia);
-			System.out.println(transa);
+			
 		}
 	}
 
@@ -92,14 +94,14 @@ public class AppBanco {
 	 * 
 	 * @param cantidad
 	 */
-	public static void comprarAcciones(int cantidad) {
-		int ac0 = 700;
-		int ac1 = 500;
-		int ac2 = 3000;
-		int ac3 = 34000;
+	public static void comprarAcciones(double cantidad) {
+		 double ac0 = 700;
+		 double ac1 = 500;
+		 double ac2 = 3000;
+		 double ac3 = 34000;
 		if (opcion1 == 1) {
 			setBalance(getBalance() - cantidad);
-			cantidad = cantidad / ac0;
+			cantidad =  cantidad / ac0;
 			acciones = cantidad;
 		} else if (opcion1 == 2) {
 			setBalance(getBalance() - cantidad);
@@ -108,7 +110,7 @@ public class AppBanco {
 		} else if (opcion1 == 3) {
 			setBalance(getBalance() - cantidad);
 			cantidad = cantidad / ac2;
-			acciones = cantidad;
+			acciones = (double)cantidad;
 		} else if (opcion1 == 4) {
 			setBalance(getBalance() - cantidad);
 			cantidad = cantidad / ac3;
@@ -136,21 +138,21 @@ public class AppBanco {
 	}
 
 	/**
-	 * Nos devuelve el balance
+	 * Nos devuelve el valor del balance
 	 * 
 	 * @return balance
 	 */
 	public static int getBalance() {
-		return balance;
+		return (int) balance;
 	}
 
 	/**
-	 * Modifica el balance
+	 * Modifica el valor del balance
 	 * 
-	 * @param balance
+	 * @param d
 	 */
-	public static void setBalance(int balance) {
-		AppBanco.balance = balance;
+	public static void setBalance(double d) {
+		AppBanco.balance = d;
 	}
 
 	/**
@@ -169,6 +171,34 @@ public class AppBanco {
 	 */
 	public static void setNombreUsuario(String nombreUsuario) {
 		AppBanco.nombreUsuario = nombreUsuario;
+	}
+	
+	/** Devuelve el valor de acciones
+	 * @return acciones
+	 */
+	public static double getAcciones() {
+		return acciones;
+	}
+
+	/** Modifica el valor de acciones
+	 * @param acciones
+	 */
+	public static void setAcciones(double acciones) {
+		AppBanco.acciones = acciones;
+	}
+	
+	/** Devuelve el valor de opcion1
+	 * @return opcion1
+	 */
+	public static byte getOpcion1() {
+		return opcion1;
+	}
+
+	/** Modifica el valor de opcion1
+	 * @param opcion1
+	 */
+	public static void setOpcion1(byte opcion1) {
+		AppBanco.opcion1 = opcion1;
 	}
 
 }
