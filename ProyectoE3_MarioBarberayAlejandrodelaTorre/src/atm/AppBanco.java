@@ -26,8 +26,8 @@ public class AppBanco {
 	/**
 	 * Constuctor de appbanco
 	 * 
-	 * @param nU
-	 * @param idU
+	 * @param nU String
+	 * @param idU String
 	 */
 	public AppBanco(String nU, String idU) {
 
@@ -36,9 +36,9 @@ public class AppBanco {
 	}
 
 	/**
-	 * Deposita la cantidad en la cuenta
+	 * Permite al usuario acceder a su cuenta
 	 * 
-	 * @param cantidad
+	 * 
 	 */
 
 	public static void login() {
@@ -55,6 +55,9 @@ public class AppBanco {
 		} while (contraseña != scan);
 	}
 
+	/** Deposita la cantidad en la cuenta
+	 * @param cantidad
+	 */
 	public static void deposito(int cantidad) {
 
 		if (cantidad != 0) {
@@ -181,7 +184,7 @@ public class AppBanco {
 	}
 
 	/** Modifica el valor de acciones
-	 * @param acciones
+	 * @param acciones double 
 	 */
 	public static void setAcciones(double acciones) {
 		AppBanco.acciones = acciones;
